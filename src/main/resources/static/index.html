@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="kor" class="no-js">
+<head>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<meta charset=utf-8 />
+
+	<!--파일 첨부-->
+	<script src="./js/upload.js"></script>
+	<style>
+		#filebox label {
+			display: inline-block;
+			padding: .5em .75em;
+			color: #999;
+			font-size:inherit;
+			line-height: normal;
+			vertical-align: middle;
+			background-color: #fdfdfd;
+			cursor: pointer;
+			border: 1px solid #ebebeb;
+			border-bottom-color: #e2e2e2;
+			border-radius: .25em;
+		}
+		#filebox input[type="file"] {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip:rect(0,0,0,0);
+			border: 0;
+		}
+
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="https://kit.fontawesome.com/dfda7a7558.js" crossorigin="anonymous"></script>
+	<title>Secondary Expandable Menu</title>
+</head>
+<body>
+<header>
+	<a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></a>
+</header>
+<main class="cd-main-content">
+
+
+		<div class="s-heading">
+<!--			&lt;!&ndash;	파일첨부&ndash;&gt;-->
+<!--			<form action="http://49.50.161.177:80/uploader" method="POST" enctype="multipart/form-data">-->
+<!--				<input type='file' name='file' onchange="readURL(this);" />-->
+<!--				<img id="blah" src="#" alt="your image" />-->
+<!--				<button type="submit">Submit & predict</button>-->
+<!--			</form>-->
+<!--		</div>-->
+		<!--services-box-container------------------->
+		<div class="s-box-container">
+			<form action="http://49.50.161.177:80/uploader" method="POST" enctype="multipart/form-data">
+
+			<!--service-box-1---------------->
+			<div class="s-box">
+				<!--top-bar-------->
+				<div class="bar"></div>
+				<!--img---------->
+				<img id="blah" src="#" alt="" />
+				<!--services-name---------->
+
+				<!--details------>
+				<div class="filebox">
+					<label for="ex_file">업로드</label>
+					<input type='file' class id = "ex_file" name='file' accept="image/*,capture=camera" onchange="readURL(this);" />
+					<input type='text' id = "ex_file" name='key' value="1" style="display:none"/>
+				</div>
+			</div>
+				<center>
+					<button type="submit" class="s-btn">제출하기</button>
+				</center>
+			</form>
+		</div>
+	</div>
+	<!--	파일첨부-->
+	<div id="container">
+		<center>
+	<div id ="btn_group">
+		<button id="btn1"><i class="fas fa-camera-retro"></i></button>
+		<button id="btn3"><i class="far fa-image"></i></button>
+		<button id="btn2"><i class="fas fa-leaf"></i></button>
+	</div>
+		</center>
+	</div>
+	<!-- put your content here -->
+
+</main> <!-- cd-main-content -->
+
+<nav id="cd-lateral-nav">
+	<ul class="cd-navigation">
+		<li class="item-has-children">
+			<a href="#0">Services</a>
+			<ul class="sub-menu">
+				<li><a href="#0">Brand</a></li>
+				<li><a href="#0">Web Apps</a></li>
+				<li><a href="#0">Mobile Apps</a></li>
+			</ul>
+		</li> <!-- item-has-children -->
+
+		<li class="item-has-children">
+			<a href="#0">Products</a>
+			<ul class="sub-menu">
+				<li><a href="#0">Product 1</a></li>
+				<li><a href="#0">Product 2</a></li>
+				<li><a href="#0">Product 3</a></li>
+				<li><a href="#0">Product 4</a></li>
+				<li><a href="#0">Product 5</a></li>
+			</ul>
+		</li> <!-- item-has-children -->
+
+		<li class="item-has-children">
+			<a href="#0">Stockists</a>
+			<ul class="sub-menu">
+				<li><a href="#0">London</a></li>
+				<li><a href="#0">New York</a></li>
+				<li><a href="#0">Milan</a></li>
+				<li><a href="#0">Paris</a></li>
+			</ul>
+		</li> <!-- item-has-children -->
+	</ul> <!-- cd-navigation -->
+
+	<ul class="cd-navigation cd-single-item-wrapper">
+		<li><a href="#0">Tour</a></li>
+		<li><a href="#0">Login</a></li>
+		<li><a href="#0">Register</a></li>
+		<li><a href="#0">Pricing</a></li>
+		<li><a href="#0">Support</a></li>
+	</ul> <!-- cd-single-item-wrapper -->
+
+	<ul class="cd-navigation cd-single-item-wrapper">
+		<li><a class="current" href="#0">Journal</a></li>
+		<li><a href="#0">FAQ</a></li>
+		<li><a href="#0">Terms &amp; Conditions</a></li>
+		<li><a href="#0">Careers</a></li>
+		<li><a href="#0">Students</a></li>
+	</ul> <!-- cd-single-item-wrapper -->
+
+	<div class="cd-navigation socials">
+		<a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
+		<a class="cd-github cd-img-replace" href="#0">Git Hub</a>
+		<a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
+		<a class="cd-google cd-img-replace" href="#0">Google Plus</a>
+	</div> <!-- socials -->
+</nav>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+</html>

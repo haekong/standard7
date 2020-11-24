@@ -1,0 +1,168 @@
+<!-----------------------------------
+ ----카메라 및 사진가져오기 페이지 (비어있음)------
+ ----------------------------------->
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <!--파일 첨부-->
+    <script src="./js/upload.js"></script>
+    <style>
+        #filebox label {
+            display: inline-block;
+            padding: .5em .75em;
+            color: #999;
+            font-size:inherit;
+            line-height: normal;
+            vertical-align: middle;
+            background-color: #fdfdfd;
+            cursor: pointer;
+            border: 1px solid #ebebeb;
+            border-bottom-color: #e2e2e2;
+            border-radius: .25em;
+        }
+        #filebox input[type="file"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip:rect(0,0,0,0);
+            border: 0;
+        }
+
+    </style>
+	<title>논뚜러닝-병해충예찰 서비스</title>
+</head>
+<body>
+   <header>
+      <a id="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="Homepage"></a>
+      <nav id="cd-top-nav">
+         <ul>
+            <li><a href="#0"></a></li>
+            <li><a href="#0"></a></li>
+         </ul>
+      </nav>
+      <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text"></span><span class="cd-menu-icon"></span></a>
+   </header>
+	<main class="cd-main-content">
+
+
+        <div class="s-heading">
+            <!--			&lt;!&ndash;	파일첨부&ndash;&gt;-->
+            <!--			<form action="http://49.50.161.177:80/uploader" method="POST" enctype="multipart/form-data">-->
+            <!--				<input type='file' name='file' onchange="readURL(this);" />-->
+            <!--				<img id="blah" src="#" alt="your image" />-->
+            <!--				<button type="submit">Submit & predict</button>-->
+            <!--			</form>-->
+            <!--		</div>-->
+            <!--services-box-container------------------->
+            <div class="s-box-container">
+                <form action="http://49.50.161.177:80/uploader" method="POST" enctype="multipart/form-data">
+
+                    <!--service-box-1---------------->
+                    <div class="s-box">
+                        <!--top-bar-------->
+                        <div class="bar"></div>
+                        <!--img---------->
+                        <img id="blah" src="#" alt="" />
+                        <!--services-name---------->
+
+                        <!--details------>
+                        <div class="filebox">
+                            <label for="ex_file">업로드</label>
+                            <input type='file' class id = "ex_file" name='file' accept="image/*,capture=camera" onchange="readURL(this);" />
+                            <input type='text' id = "ex_file" name='key' value="1" style="display:none"/>
+                        </div>
+                    </div>
+                    <center>
+                        <button type="submit" class="s-btn">제출하기</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+
+
+   </main> <!-- cd-main-content -->
+
+
+
+
+
+   <nav id="cd-lateral-nav">
+      <ul class="cd-navigation">
+         <li class="item-has-children">
+            <a href="#0">논뚜러닝</a>
+            <ul class="sub-menu">
+               <li><a href="#0">서비스 안내</a></li>
+               <li><a href="#0">Web Apps</a></li>
+            </ul>
+         </li> <!-- item-has-children -->
+
+         <li class="item-has-children">
+            <a href="#0">병해충</a>
+            <ul class="sub-menu">
+               <li><a href="#0">가지검은마름병</a></li>
+               <li><a href="#0">갈색무늬병</a></li>
+               <li><a href="#0">검은별무늬병</a></li>
+            </ul>
+         </li> <!-- item-has-children -->
+
+       <li class="item-has-children">
+            <a href="#0">농작물</a>
+            <ul class="sub-menu">
+               <li><a href="#0">사과</a></li>
+               <li><a href="#0">배</a></li>
+               <li><a href="#0">감</a></li>
+               <li><a href="#0">귤</a></li>
+            </ul>
+         </li> <!-- item-has-children -->
+      </ul> <!-- cd-navigation -->
+
+      <ul class="cd-navigation cd-single-item-wrapper">
+         <li><a href="detact_first.html">병해충자가진단</a></li>
+         <li class="item-has-children">
+            <a href="#0">이달의 병해충발생정보</a>
+             <ul class="sub-menu">
+               <li><a href="https://nongup.gg.go.kr/data/57">경기도</a></li>
+               <li><a href="http://www.gba.go.kr/index.do?menu_id=00000098">경상북도</a></li>
+               <li><a href="http://www.gnares.go.kr/Home/BBSView.mbz?action=MAPP_0000000006&schIdx=19393">경상남도</a></li>
+               <li><a href="http://ares.chungbuk.go.kr/home/sub.php?menukey=1115">충청북도</a></li>
+               <li><a href="https://cnnongup.chungnam.go.kr/rest/dbyhsCccrrncInfo.cs;WEB_JSESSIONID=36060CECAA0CF177653065C58FF2D680?m=12">충청남도</a></li>              
+               <li><a href="https://www.jbares.go.kr/board/list.jbares?boardId=BBS_0000012&menuCd=DOM_000000103002001000&contentsSid=31">전라북도</a></li>
+               <li><a href="http://www.jares.go.kr/home/sub.do?m=16&pageNo=5&sYear=%EC%A0%84%EC%B2%B4&sType=sCntntsSj&sText=">전라남도</a></li>         
+               <li><a href="https://agri.jeju.go.kr/agri/farminginfo/croptrail.htm">제주도</a></li>                                     
+        
+      </ul> <!-- cd-single-item-wrapper -->
+
+      <ul class="cd-navigation cd-single-item-wrapper">
+         <li><a class="current" href="open_write.html">공개상담</a></li>         
+         <li><a class="current" href="q&a_write.html">묻고답하기</a></li>        
+         <li><a href="http://pis.rda.go.kr/;jsessionid=QdI36vB8Jg77zhAnIjGvWUECwworxKLb3mUFgQxBloHsVZr9VVAYttouinf7t5rF.NAAS-AP2-mw1_servlet_engine7">농약정보365</a></li>
+         <li><a href="http://lib.rda.go.kr/search/farmingSkillGuideList.do">안전방제도움서</a></li>
+         <li><a href="newsboard.html">영농기술뉴스</a></li>
+         <li><a href="https://www.nongsaro.go.kr/portal/expertMain.ps?menuId=PS00001">농업기술포털  &amp; 농사로</a></li>
+         <li><a href="#0">농업인상담소 목록</a></li>
+         <li><a href="education.html">병해충교육 안내</a></li>
+      </ul> <!-- cd-single-item-wrapper -->
+
+      <div class="cd-navigation socials">
+         <a class="cd-twitter cd-img-replace" href="#0">Twitter</a>
+         <a class="cd-github cd-img-replace" href="#0">Git Hub</a>
+         <a class="cd-facebook cd-img-replace" href="#0">Facebook</a>
+         <a class="cd-google cd-img-replace" href="#0">Google Plus</a>
+      </div> <!-- socials -->
+   </nav>
+   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>

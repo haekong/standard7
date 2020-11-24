@@ -1,0 +1,340 @@
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+
+@font-face {
+    font-family: 'NanumSquare';
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+* {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #acdb34;
+    font-family: 'NanumSquare';
+
+}
+
+/* ------------------------------------ */
+a {
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ------------------------------------ */
+h1,h2,h3,h4,h5,h6 {margin: 0px;}
+
+p {margin: 0px;}
+
+ul, li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+/* ------------------------------------ */
+input {
+    display: block;
+    outline: none;
+    border: none !important;
+}
+
+textarea {
+    display: block;
+    outline: none;
+}
+
+textarea:focus, input:focus {
+    border-color: transparent !important;
+}
+
+/* ------------------------------------ */
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background: #acdb34;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.wrap-table100 {
+    width: 600px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+table {
+    width: 100%;
+    background-color: #fff;
+}
+
+th, td {
+    font-weight: unset;
+    padding-right: 10px;
+}
+
+.column100 {
+    width: 200px;
+    padding-left: 25px;
+}
+
+.column100.column1 {
+    width: 130px;
+    padding-left: 42px;
+}
+
+.row100.head th {
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+
+.row100 td {
+    padding-top: 18px;
+    padding-bottom: 14px;
+}
+
+
+/*==================================================================
+
+
+/*==================================================================
+[ Ver2 ]*/
+.table100.ver2 tbody tr:nth-child(even) {
+    background-color: #eaf8e6;
+}
+
+.table100.ver2 td {
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    color: #0d4633;
+    line-height: 1.4;
+}
+
+.table100.ver2 th {
+    font-family: 'NanumSquare';
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    background-color: #0d4633;
+}
+
+.table100.ver2 .row100:hover td {
+    background-color: #83d160;
+    color: #fff;
+}
+
+.table100.ver2 .hov-column-ver2 {
+    background-color: #83d160;
+    color: #fff;
+}
+
+.table100.ver2 .hov-column-head-ver2 {
+    background-color: #484848 !important;
+}
+
+.table100.ver2 .row100 td:hover {
+    background-color: #57b846;
+    color: #fff;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ /*button css*]*/
+.sub-main{
+    width: 60%;
+    margin:140px;
+}
+
+.button-one{
+    text-align: center;
+    cursor: pointer;
+    font-size:20px;
+    margin: 0 0 0 100px;
+}
+
+
+
+/*Button One*/
+.button-one {
+    padding:10px 40px;
+    outline: none;
+    background-color: #009432;
+    border: none;
+    border-radius:5px;
+    box-shadow: 0 9px #fff;
+}
+
+.button-one:hover{
+    background-color: #009432;
+}
+
+.button-one:active {
+    background-color: #2ecc71;
+    box-shadow: 0 5px #fff;
+    transform: translateY(4px);
+}
+
+
+/*Page number [pagination]*/
+:root{ --color: #009432; }
+.pagination-outer{ text-align: center; }
+.pagination{
+    font-family: 'Sunflower', sans-serif;
+    padding: 20px 0;
+    display: inline-flex;
+    position: relative;
+}
+.pagination:before{
+    content: '';
+    background: var(--color);
+    height: 5px;
+    width: 99%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.pagination li a.page-link{
+    color: var(--color);
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    height: 35px;
+    width: 45px;
+    padding: 0;
+    margin: 0 7px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover{
+    color: #fff;
+}
+.pagination li a.page-link:before,
+.pagination li a.page-link:after{
+    content: '';
+    background-color: var(--color);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a.page-link:after{
+    width: 10px;
+    height: 18px;
+    transform: translateX(-50%);
+    top: -10px;
+    left: 50%;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.pagination li.active a.page-link:before,
+.pagination li a.page-link:hover:before{
+    opacity: 1;
+}
+.pagination li.active a.page-link:after,
+.pagination li a.page-link:hover:after{
+    opacity: 1;
+    top: -15px;
+}
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link{
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 16px;
+    height: 28px;
+    width: 28px;
+    margin: -33px 0 0;
+    border: 3px solid var(--color);
+}
+.pagination li:first-child a.page-link{ border-color: var(--color); }
+.pagination li:first-child a.page-link:before,
+.pagination li:first-child a.page-link:after,
+.pagination li:last-child a.page-link:before,
+.pagination li:last-child a.page-link:after{
+    display: none;
+}
+.pagination li:first-child a.page-link:hover,
+.pagination li:last-child a.page-link:hover{
+    color: var(--color);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--color);
+}
+@media only screen and (max-width: 480px){
+    .pagination:before{ display: none; }
+    .pagination{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .pagination li{
+        margin: 5px 2px;
+        display: inline-block;
+    }
+    .pagination li a.page-link{ margin: 0; }
+    .pagination li a.page-link:after{ display: none; }
+}
